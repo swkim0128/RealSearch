@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>read Page</title>
+        <link rel = "stylesheet" href = "css/bootstrap.css">
+        <link rel = "stylesheet" href = "css/readPage.css">
+    </head>
+
+    <body>
+        <header class="container theme-showcase">
+            <div class="jumbotron">
+                <h1 class="text-center">Read Page</h1>
+            </div>
+        </header>
+
+        <main class="container theme-showcase">
+            <% prodList.forEach(function(item, index){ %>
+            <section class="row">
+                <article class="col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                                word
+                        </div>
+                        <div class="item panel-body">
+                            <%= item.word %>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            info
+                        </div>
+                        <div class="panel-body">
+                            <p><%= item.info %></p>
+                            <p><%= item.info %></p>
+                            <p><%= item.info %></p>
+                        </div>
+                    </div>
+                </article>
+                <article class="col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            image
+                        </div>
+                        <div class="panel-body">
+                            <img class="col-xs-12" src="<%= item.ficture %>">
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xs-12">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/106613NbPQ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <% }); %>        
+                    </div>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>List Page</title>
+		<link rel = "stylesheet" href = "css/bootstrap.css">
+		<link rel = "stylesheet" href = "css/list.css">
+	</head>
+	<body>
+		<header class="container">
+			<div class="jumbotron">
+				<h1 class="text-center">List Page</h1>
+				<a class="text-center" href='/insert'>Insert Data</a>				
+			</div>
+		</header>
+		<hr/>
+		<article class="container">
+			<div class = "row">
+				<div class = "col-xs-12">
+					<div class = "panel panel-primary">
+						<table class ="table" width="100%" border="1">
+							<thead>
+								<tr>
+									<th>DELETE</th>
+									<th>EDIT</th>
+									<th>ID</th>
+									<th>Name</th>
+									<th>Model Number</th>
+									<th>Series</th>
+								</tr>		
+							</thead>
+							<tbody>
+								<% prodList.forEach(function(item, index){ %>
+									<tr>
+										<td><a href='/delete/<%= item.id %>' >DELETE</a></td>
+										<td><a href='/edit/<%= item.id %>' >EDIT</a></td>
+										<td><%= item.id %></td>
+										<td><%= item.name %></td>
+										<td><%= item.modelnumber %></td>
+										<td><%= item.series %></td>
+									</tr>
+								<% }); %>		
+							</tbody>
+						</table>					
+					</div>
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

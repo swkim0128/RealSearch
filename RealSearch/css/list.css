@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+* {
+    font-family: 'Nanum Gothic';
+}
+
+.jumbotron {
+    background-color: rgb(139, 180, 255);
+    background-size: cover;
+    color: white;
+}
+
+a.text-center {
+    color: white;    
+}
+
+table.table thead {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #369;
+    border-bottom: 3px solid #036;
+}
+
+table.table tbody td {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}

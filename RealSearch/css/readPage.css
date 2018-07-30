@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.jumbotron {
+    background-color: black;
+    background-size: cover;
+    color: yellow;
+}
+
+#wrapper {
+    display: flex;
+}

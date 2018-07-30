@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>List Page</title>
+
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="css/listPage.css" rel="stylesheet" type="text/css" media="screen">
+    </head>
+
+    <body>
+        <header class="container">
+            <div class="jumbotron">
+                <h1>List Page</h1>
+            </div>
+        </header>
+    <hr/>
+    
+        <article class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center col-xs-2">get_rank</th>
+                        <th class="text-center col-xs-10">get_word</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <% prodList.forEach(function(item, index){ %>
+                    <tr>
+                        <td><span class="label label-default"><%= item.rank %></span></td>
+                        <td><a href='/read/<%=item.word %>'><%= item.word %></a></td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </article>
+    </body>
+</html>

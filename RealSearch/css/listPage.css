@@ -1,0 +1,12 @@
+.jumbotron {
+    background-color: yellow;
+}
+
+.label.label-default {
+    background-color: rgb(230, 230, 230);
+    color: rgb(110, 110, 110);
+}
+
+table {
+    text-align: center;
+}
